@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<title>Robot Simulator</title>
+<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script type="text/javascript" src="src/RobotBrain.js"></script>
+</head>
+
+<body ng-app="robotSimulator">
+	<h2>Robot Simulator</h2>
+	<div ng-controller = "RobotController">
+		Command: 
+		<input id = "commandInput" ng-model = "command"></input>
+		<button id = "execute" ng-click = "executeCommand()">Execute</button>
+		<button id = "clear" ng-click = "clearOutput()">Clear output</button>
+		<br>
+		Output: 
+		<br>
+		<textarea auto-scroll style = "width: 410px; height: 200px" id = "output" ng-model = "output" ng-init = "output=''"></textarea>
+	</div>
+	<button id="runUnitTest" onclick="window.open('SpecRunner.html')">Run test cases</button>
+</body>
+</html>
